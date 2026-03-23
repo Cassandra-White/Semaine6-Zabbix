@@ -1,0 +1,8 @@
+# Les 3 services doivent etre actifs
+systemctl is-active zabbix-server && echo "[OK] Zabbix Server" || echo "[ERR] Zabbix Server"
+systemctl is-active zabbix-agent2 && echo "[OK] Zabbix Agent2" || echo "[ERR] Zabbix Agent2"
+systemctl is-active apache2        && echo "[OK] Apache"        || echo "[ERR] Apache"
+systemctl is-active mariadb        && echo "[OK] MariaDB"       || echo "[ERR] MariaDB"
+
+# Voir les logs si Zabbix Server ne demarre pas
+tail -30 /var/log/zabbix/zabbix_server.log

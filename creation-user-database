@@ -5,6 +5,8 @@ SET GLOBAL log_bin_trust_function_creators = 1;
 FLUSH PRIVILEGES;
 EXIT;
 
+sudo mysql -u root -p
+
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Azerty1*';
 FLUSH PRIVILEGES;
